@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nursyakila Roslan — Business Analyst & Web Consultant</title>
+<meta name="description" content="Nursyakila Roslan is a Business Analyst, Web Consultant and Frontend Developer who turns ideas into practical digital solutions.">
+<meta property="og:title" content="Nursyakila Roslan — Business Analyst & Web Consultant">
+<meta property="og:description" content="Turning ideas into practical digital solutions.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --warm-white:#FAFAF7;
+    --cream:#F3EFE6;
+    --sage:#C9D6C5;
+    --matcha:#7A9A75;
+    --matcha-deep:#5C7E58;
+    --beige:#E7DECD;
+    --charcoal:#2B2B27;
+    --charcoal-soft:#52524C;
+    --line:#DDD7C7;
+    --radius:20px;
+    --radius-sm:12px;
+    --serif:'Fraunces', serif;
+    --sans:'Inter', sans-serif;
+    --max:1120px;
+  }
+  [data-theme="dark"]{
+    --warm-white:#1E1E1B;
+    --cream:#262622;
+    --sage:#3B4A38;
+    --matcha:#9FBE96;
+    --matcha-deep:#B6D4AC;
+    --beige:#2E2C25;
+    --charcoal:#F4F1E9;
+    --charcoal-soft:#C9C5B6;
+    --line:#3A382F;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
+  }
+  body{
+    margin:0;
+    background:var(--warm-white);
+    color:var(--charcoal);
+    font-family:var(--sans);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    transition:background .4s ease, color .4s ease;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 28px;}
+  .eyebrow{
+    font-family:var(--sans); font-weight:600; letter-spacing:.14em; text-transform:uppercase;
+    font-size:12px; color:var(--matcha-deep);
+  }
+  h1,h2,h3{font-family:var(--serif); font-weight:600; margin:0; color:var(--charcoal);}
+  p{margin:0;}
+
+  /* ---------- Skip link / focus ---------- */
+  .skip-link{position:absolute; left:-999px; top:0; background:var(--matcha); color:#fff; padding:10px 16px; border-radius:8px; z-index:200;}
+  .skip-link:focus{left:16px; top:16px;}
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
+    outline:2px solid var(--matcha-deep); outline-offset:3px; border-radius:6px;
+  }
+
+  /* ---------- Nav ---------- */
+  header.site-nav{
+    position:sticky; top:0; z-index:100;
+    background:color-mix(in srgb, var(--warm-white) 88%, transparent);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{display:flex; align-items:center; justify-content:space-between; padding:16px 28px; max-width:var(--max); margin:0 auto;}
+  .logo{font-family:var(--serif); font-weight:600; font-size:19px; letter-spacing:.01em;}
+  .logo .dot{color:var(--matcha-deep);}
+  nav ul{display:flex; gap:28px; list-style:none; margin:0; padding:0;}
+  nav a{font-size:14px; font-weight:500; text-decoration:none; color:var(--charcoal-soft); position:relative;}
+  nav a::after{content:""; position:absolute; left:0; bottom:-6px; width:0; height:2px; background:var(--matcha-deep); transition:width .25s ease;}
+  nav a:hover::after, nav a:focus-visible::after{width:100%;}
+  .nav-right{display:flex; align-items:center; gap:14px;}
+  .theme-toggle{
+    width:38px; height:38px; border-radius:50%; border:1px solid var(--line); background:var(--cream);
+    cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:16px;
+  }
+  .menu-btn{display:none; background:none; border:none; font-size:22px; cursor:pointer; color:var(--charcoal);}
+  @media (max-width:820px){
+    nav ul{position:fixed; top:65px; left:0; right:0; background:var(--warm-white); flex-direction:column; gap:0;
+      border-bottom:1px solid var(--line); transform:translateY(-110%); transition:transform .3s ease; padding:8px 28px;}
+    nav ul.open{transform:translateY(0);}
+    nav ul li{border-top:1px solid var(--line); padding: 14px 0;}
+    .menu-btn{display:block;}
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex; align-items:center; gap:8px; font-family:var(--sans); font-weight:600; font-size:14.5px;
+    padding:13px 24px; border-radius:999px; text-decoration:none; cursor:pointer; border:1px solid transparent;
+    transition:transform .2s ease, box-shadow .2s ease, background .25s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--matcha-deep); color:#FAFAF7;}
+  .btn-primary:hover{box-shadow:0 10px 24px -8px color-mix(in srgb, var(--matcha-deep) 70%, transparent);}
+  .btn-ghost{background:transparent; border:1px solid var(--line); color:var(--charcoal);}
+  .btn-ghost:hover{background:var(--cream);}
+  .btn-text{background:none; border:none; padding:0; font-weight:600; color:var(--matcha-deep); text-decoration:underline; text-underline-offset:3px;}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:96px 0 80px; overflow:hidden;}
+  .hero-grid{display:grid; grid-template-columns:1.15fr .85fr; gap:56px; align-items:center;}
+  @media (max-width:880px){ .hero-grid{grid-template-columns:1fr; gap:40px;} }
+  .hero h1{font-size:clamp(34px,5vw,56px); line-height:1.12; margin:14px 0 18px;}
+  .hero h1 .accent{color:var(--matcha-deep); font-style:italic;}
+  .hero p.lead{font-size:17px; color:var(--charcoal-soft); max-width:520px;}
+  .typing{border-right:2px solid var(--matcha-deep); padding-right:3px;}
+  .hero-actions{display:flex; gap:14px; flex-wrap:wrap; margin-top:30px;}
+  .portrait-frame{
+    position:relative; aspect-ratio:4/5; border-radius:28px; overflow:hidden;
+    background:linear-gradient(160deg, var(--sage), var(--beige));
+    display:flex; align-items:center; justify-content:center;
+  }
+  .portrait-frame .initials{font-family:var(--serif); font-size:120px; color:var(--matcha-deep); opacity:.55;}
+  .portrait-frame::before{
+    content:""; position:absolute; inset:14px; border:1px solid color-mix(in srgb, var(--charcoal) 12%, transparent); border-radius:20px;
+  }
+  .blob{
+    position:absolute; width:240px; height:240px; border-radius:50%; background:var(--matcha); opacity:.18; filter:blur(10px);
+    top:-60px; right:-60px; z-index:-1;
+  }
+
+  /* ---------- Section shell ---------- */
+  section{padding:88px 0;}
+  .section-head{max-width:620px; margin-bottom:44px;}
+  .section-head h2{font-size:clamp(26px,3.4vw,38px); margin-top:10px;}
+  .reveal{opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+
+  /* ---------- About ---------- */
+  .about{background:var(--cream); border-radius:32px; margin:0 16px;}
+  @media (min-width:601px){ .about{margin:0 28px;} }
+  .about-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start;}
+  @media (max-width:880px){ .about-grid{grid-template-columns:1fr;} }
+  .about-grid p{margin-bottom:16px; color:var(--charcoal-soft);}
+  .about-grid p strong{color:var(--charcoal);}
+  .trait-list{display:flex; flex-wrap:wrap; gap:10px; margin-top:24px;}
+  .trait{
+    font-size:13px; font-weight:500; padding:7px 14px; border-radius:999px; background:var(--warm-white);
+    border:1px solid var(--line); color:var(--charcoal-soft);
+  }
+
+  /* ---------- Services / What I Do ---------- */
+  .card-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:24px;}
+  @media (max-width:760px){ .card-grid{grid-template-columns:1fr;} }
+  .service-card{
+    background:var(--warm-white); border:1px solid var(--line); border-radius:var(--radius); padding:30px;
+    transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .service-card:hover{transform:translateY(-4px); box-shadow:0 18px 36px -22px rgba(0,0,0,.18); border-color:var(--matcha);}
+  .service-icon{
+    width:46px; height:46px; border-radius:12px; background:var(--sage); display:flex; align-items:center; justify-content:center;
+    font-size:20px; margin-bottom:16px;
+  }
+  .service-card h3{font-size:19px; margin-bottom:8px;}
+  .service-card p{color:var(--charcoal-soft); font-size:14.5px;}
+
+  /* ---------- Timeline ---------- */
+  .timeline{position:relative; padding-left:32px; border-left:2px solid var(--line);}
+  .tl-item{position:relative; padding-bottom:46px;}
+  .tl-item:last-child{padding-bottom:0;}
+  .tl-dot{
+    position:absolute; left:-39px; top:4px; width:16px; height:16px; border-radius:50%; background:var(--matcha-deep);
+    border:3px solid var(--warm-white); box-shadow:0 0 0 1px var(--matcha-deep);
+  }
+  .tl-period{font-size:12.5px; font-weight:600; letter-spacing:.05em; color:var(--matcha-deep); text-transform:uppercase;}
+  .tl-item h3{font-size:20px; margin:6px 0 2px;}
+  .tl-org{font-size:14px; color:var(--charcoal-soft); margin-bottom:10px; display:block;}
+  .tl-item ul{margin:0; padding-left:18px; color:var(--charcoal-soft); font-size:14.5px;}
+  .tl-item li{margin-bottom:6px;}
+
+  /* ---------- Projects ---------- */
+  .project-filters{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:28px;}
+  .filter-btn{
+    font-size:13px; font-weight:600; padding:8px 16px; border-radius:999px; border:1px solid var(--line);
+    background:var(--warm-white); cursor:pointer; color:var(--charcoal-soft);
+  }
+  .filter-btn.active{background:var(--matcha-deep); color:#fff; border-color:var(--matcha-deep);}
+  .project-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:24px;}
+  @media (max-width:760px){ .project-grid{grid-template-columns:1fr;} }
+  .project-card{
+    border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:var(--warm-white);
+    display:none;
+  }
+  .project-card.show{display:flex; flex-direction:column;}
+  .project-thumb{
+    height:150px; background:linear-gradient(135deg, var(--sage), var(--beige)); display:flex; align-items:center;
+    justify-content:center; font-family:var(--serif); font-size:15px; color:var(--matcha-deep); letter-spacing:.04em;
+  }
+  .project-body{padding:24px;}
+  .project-tag{font-size:11.5px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--matcha-deep);}
+  .project-card h3{font-size:18px; margin:8px 0 10px;}
+  .project-body dl{margin:14px 0 0; font-size:13.5px; color:var(--charcoal-soft);}
+  .project-body dt{font-weight:600; color:var(--charcoal); margin-top:8px;}
+  .project-body dd{margin:2px 0 0;}
+  .tech-pills{display:flex; flex-wrap:wrap; gap:6px; margin-top:14px;}
+  .tech-pills span{font-size:11.5px; background:var(--cream); padding:4px 10px; border-radius:999px; color:var(--charcoal-soft);}
+
+  /* ---------- Skills ---------- */
+  .skills-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  @media (max-width:880px){ .skills-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:560px){ .skills-grid{grid-template-columns:1fr;} }
+  .skill-card{border:1px solid var(--line); border-radius:var(--radius-sm); padding:22px; background:var(--cream);}
+  .skill-card h3{font-size:15.5px; margin-bottom:12px; color:var(--matcha-deep);}
+  .skill-card ul{margin:0; padding:0; list-style:none; font-size:13.5px; color:var(--charcoal-soft);}
+  .skill-card li{padding:4px 0; border-bottom:1px dashed var(--line);}
+  .skill-card li:last-child{border-bottom:none;}
+
+  /* ---------- Beyond Work ---------- */
+  .beyond-grid{display:grid; grid-template-columns:repeat(6,1fr); gap:18px; text-align:center;}
+  @media (max-width:760px){ .beyond-grid{grid-template-columns:repeat(3,1fr);} }
+  @media (max-width:480px){ .beyond-grid{grid-template-columns:repeat(2,1fr);} }
+  .beyond-item{padding:22px 8px;}
+  .beyond-icon{font-size:28px; margin-bottom:10px;}
+  .beyond-item span{font-size:13px; color:var(--charcoal-soft);}
+
+  /* ---------- Approach ---------- */
+  .approach{
+    background:var(--charcoal); color:var(--warm-white); border-radius:32px; margin:0 16px; text-align:center;
+    padding:90px 40px;
+  }
+  @media (min-width:601px){ .approach{margin:0 28px;} }
+  .approach blockquote{
+    font-family:var(--serif); font-size:clamp(22px,3.4vw,34px); line-height:1.4; max-width:780px; margin:0 auto;
+    font-style:italic;
+  }
+  .approach cite{display:block; margin-top:26px; font-style:normal; font-size:13px; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--sage); font-family:var(--sans);}
+
+  /* ---------- Services pricing-ish list ---------- */
+  .services-list{display:grid; grid-template-columns:repeat(2,1fr); gap:16px;}
+  @media (max-width:680px){ .services-list{grid-template-columns:1fr;} }
+  .services-list .item{
+    display:flex; align-items:center; justify-content:space-between; padding:20px 24px; border:1px solid var(--line);
+    border-radius:var(--radius-sm); background:var(--warm-white);
+  }
+  .services-list .item span.name{font-weight:600;}
+  .services-list .item span.arrow{color:var(--matcha-deep);}
+
+  /* ---------- Contact ---------- */
+  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px;}
+  @media (max-width:880px){ .contact-grid{grid-template-columns:1fr;} }
+  .contact-list{list-style:none; margin:24px 0 0; padding:0; display:flex; flex-direction:column; gap:14px;}
+  .contact-list li{display:flex; align-items:center; gap:12px; font-size:15px;}
+  .contact-list .ic{width:36px; height:36px; border-radius:10px; background:var(--cream); display:flex; align-items:center; justify-content:center;}
+  .contact-list a{text-decoration:none; border-bottom:1px solid transparent;}
+  .contact-list a:hover{border-bottom-color:var(--matcha-deep);}
+  form.contact-form{display:flex; flex-direction:column; gap:14px;}
+  .contact-form label{font-size:13px; font-weight:600; margin-bottom:6px; display:block;}
+  .contact-form input, .contact-form textarea{
+    width:100%; padding:13px 16px; border-radius:12px; border:1px solid var(--line); background:var(--cream);
+    font-family:var(--sans); font-size:14.5px; color:var(--charcoal); resize:vertical;
+  }
+  .contact-form input:focus, .contact-form textarea:focus{background:var(--warm-white);}
+  .form-status{font-size:13.5px; color:var(--matcha-deep); min-height:18px;}
+
+  /* ---------- Footer ---------- */
+  footer{border-top:1px solid var(--line); padding:36px 0; text-align:center;}
+  footer p{font-size:13px; color:var(--charcoal-soft);}
+  footer p + p{margin-top:6px;}
+
+  /* ---------- Back to top ---------- */
+  .to-top{
+    position:fixed; right:24px; bottom:24px; width:46px; height:46px; border-radius:50%; background:var(--matcha-deep);
+    color:#fff; border:none; cursor:pointer; font-size:18px; display:flex; align-items:center; justify-content:center;
+    opacity:0; pointer-events:none; transition:opacity .3s ease, transform .3s ease; z-index:90;
+  }
+  .to-top.show{opacity:1; pointer-events:auto;}
+  .to-top:hover{transform:translateY(-3px);}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="#home" class="logo">syakila<span class="dot">.</span></a>
+    <nav>
+      <ul id="navList">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="blob" aria-hidden="true"></div>
+        <p class="eyebrow">Business Analyst · Web Consultant · Frontend Developer</p>
+        <h1>Hi, I'm Nursyakila.<br>I turn <span class="accent">ideas</span> into <span class="typing" id="typingText"></span></h1>
+        <p class="lead">With a background in business analysis, software testing, technical documentation and web development, I enjoy bridging the gap between people and technology — making things simple, useful and human.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#" id="resumeBtn" class="btn btn-ghost">Download Resume ↓</a>
+          <a href="#contact" class="btn btn-ghost">Let's Connect</a>
+        </div>
+      </div>
+      <div class="portrait-frame reveal">
+        <span class="initials">NR</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap about reveal">
+      <div style="padding:64px 48px;">
+        <div class="section-head">
+          <p class="eyebrow">About Me</p>
+          <h2>From software engineering to solving real business problems</h2>
+        </div>
+        <div class="about-grid">
+          <div>
+            <p>My path started in <strong>Software Engineering at the University of Malaysia Sabah</strong>, where I first learned how systems are built, tested and documented. That foundation gave me a habit I still rely on today: before fixing anything, understand how it actually works.</p>
+            <p>Working closely with developer teams as a <strong>Business Analyst</strong> taught me to think in systems — to see a vague business problem and translate it into requirements, user stories and flows that engineers can actually build from.</p>
+          </div>
+          <div>
+            <p>Later, supporting <strong>50+ couriers and 100+ hubs daily</strong> as part of a fleet management team sharpened a different set of muscles entirely — calm communication, fast troubleshooting, and staying steady when escalations pile up across dozens of support groups at once.</p>
+            <p>Freelancing on the side gave me a third perspective: <strong>small businesses</strong> rarely need something flashy — they need a website or system that's clear, reliable and easy to maintain. That mix of system thinking, people skills and hands-on building is how I approach every project today.</p>
+          </div>
+        </div>
+        <div class="trait-list">
+          <span class="trait">Calm</span><span class="trait">Reliable</span><span class="trait">Thoughtful</span>
+          <span class="trait">Curious</span><span class="trait">Organised</span><span class="trait">Problem Solver</span>
+          <span class="trait">Good Communicator</span><span class="trait">Approachable</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT I DO -->
+  <section id="what-i-do">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">What I Do</p>
+        <h2>Where I can help</h2>
+      </div>
+      <div class="card-grid">
+        <div class="service-card reveal">
+          <div class="service-icon">🧭</div>
+          <h3>Business Analysis</h3>
+          <p>Understanding business problems and translating them into practical, technical solutions — requirements, user stories, BRDs and FRS that teams can build from.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">🖥️</div>
+          <h3>Website Development</h3>
+          <p>Building lightweight, responsive websites using HTML, CSS, JavaScript or WordPress — whatever fits the business, without unnecessary complexity.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">🐞</div>
+          <h3>Software Testing</h3>
+          <p>User Acceptance Testing, manual and regression testing, and clear bug reporting to catch issues before they reach real users.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">📋</div>
+          <h3>Documentation</h3>
+          <p>User manuals, functional requirements and system documentation written so people who didn't build the system can still understand it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Professional Journey</p>
+        <h2>Where I've worked</h2>
+      </div>
+      <div class="timeline reveal">
+        <div class="tl-item">
+          <span class="tl-dot"></span>
+          <span class="tl-period">Mar 2023 — Present</span>
+          <h3>Freelance Web Consultant</h3>
+          <span class="tl-org">Remote</span>
+          <ul>
+            <li>Consulted directly with business owners to gather requirements, define scopes and map user journeys for custom web solutions.</li>
+            <li>Deployed an e-commerce WordPress site for an oil plantation in Lahad Datu and built GoHighLevel landing pages.</li>
+            <li>Customised a PHP open-source system for student registration, grades and tuition tracking — an RM3,000 project for a private school.</li>
+            <li>Ran end-to-end UI, cross-browser and mobile responsiveness testing before launch.</li>
+          </ul>
+        </div>
+        <div class="tl-item">
+          <span class="tl-dot"></span>
+          <span class="tl-period">Sep 2023 — Mar 2026</span>
+          <h3>Fleet Management Team, SPX Express</h3>
+          <span class="tl-org">Shopee Mobile Malaysia Sdn Bhd</span>
+          <ul>
+            <li>Served as the primary technical contact for 50+ couriers and 100+ hubs daily, resolving app errors and high-pressure escalations across 50+ WhatsApp groups.</li>
+            <li>Managed recruitment and onboarding for 200+ couriers, sourcing through social media and filling urgent vacancies at critical hubs.</li>
+            <li>Led the rollout of two new courier categories across the Klang Valley, onboarding 30+ couriers at a 70% retention rate.</li>
+            <li>Conducted on-site hub visits to surface operational gaps and trained new team members on support workflows.</li>
+          </ul>
+        </div>
+        <div class="tl-item">
+          <span class="tl-dot"></span>
+          <span class="tl-period">Oct 2022 — Mar 2023</span>
+          <h3>Junior Business Analyst</h3>
+          <span class="tl-org">Stampede Solution Sdn Bhd</span>
+          <ul>
+            <li>Managed client change requests and mapped updates using Balsamiq and Figma to define system boundaries.</li>
+            <li>Ran UAT and system testing, logging and tracking bugs before production deployment.</li>
+            <li>Worked daily with clients and developers to clarify issues and helped write FRS, CRs and user guides.</li>
+          </ul>
+        </div>
+        <div class="tl-item">
+          <span class="tl-dot"></span>
+          <span class="tl-period">Sep 2021 — Sep 2022</span>
+          <h3>Business Analyst</h3>
+          <span class="tl-org">Xenber Sdn Bhd</span>
+          <ul>
+            <li>Gathered, documented and analysed business requirements through meetings and research.</li>
+            <li>Built visual workflows in Lucidchart and Microsoft Visio, and tracked functional bugs through Trello.</li>
+            <li>Developed test cases, user manuals, BRDs, FRDs and FRS, and delivered end-user training during software transitions.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Featured Projects</p>
+        <h2>Things I've built</h2>
+      </div>
+      <div class="project-filters reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+        <button class="filter-btn" data-filter="custom">Custom Systems</button>
+        <button class="filter-btn" data-filter="landing">Landing Pages</button>
+        <button class="filter-btn" data-filter="portfolio">Portfolios</button>
+      </div>
+      <div class="project-grid reveal">
+
+        <div class="project-card show" data-cat="ecommerce">
+          <div class="project-thumb">Palm Oil Co. — WordPress</div>
+          <div class="project-body">
+            <span class="project-tag">E-commerce</span>
+            <h3>Website for a Palm Oil Company</h3>
+            <dl>
+              <dt>Challenge</dt><dd>A Lahad Datu plantation needed an online storefront with no existing digital presence.</dd>
+              <dt>Solution</dt><dd>Deployed a WordPress e-commerce site with a clean catalogue and mobile-friendly checkout flow.</dd>
+              <dt>Outcome</dt><dd>Gave the business a working online sales channel and a simple admin panel they could manage themselves.</dd>
+            </dl>
+            <div class="tech-pills"><span>WordPress</span><span>cPanel</span><span>UI Testing</span></div>
+          </div>
+        </div>
+
+        <div class="project-card show" data-cat="custom">
+          <div class="project-thumb">Student Management — PHP</div>
+          <div class="project-body">
+            <span class="project-tag">Custom System</span>
+            <h3>Student Management System Customisation</h3>
+            <dl>
+              <dt>Challenge</dt><dd>A private school needed registration, grading and tuition tracking in one place, on a budget.</dd>
+              <dt>Solution</dt><dd>Customised an open-source PHP system end to end as an RM3,000 project — registration, grades and tuition in one workflow.</dd>
+              <dt>Outcome</dt><dd>Replaced manual tracking with a single reliable system the school still uses.</dd>
+            </dl>
+            <div class="tech-pills"><span>PHP</span><span>SQL</span><span>UAT</span></div>
+          </div>
+        </div>
+
+        <div class="project-card show" data-cat="landing">
+          <div class="project-thumb">Business Landing Pages</div>
+          <div class="project-body">
+            <span class="project-tag">Landing Pages</span>
+            <h3>Business Landing Pages</h3>
+            <dl>
+              <dt>Challenge</dt><dd>Small business owners needed fast, focused pages to launch offers without a full website rebuild.</dd>
+              <dt>Solution</dt><dd>Built GoHighLevel landing pages, collaborating with graphic designers on Photoshop and Illustrator assets.</dd>
+              <dt>Outcome</dt><dd>Quicker time-to-launch for promotions and lead capture.</dd>
+            </dl>
+            <div class="tech-pills"><span>GoHighLevel</span><span>Figma</span></div>
+          </div>
+        </div>
+
+        <div class="project-card show" data-cat="portfolio">
+          <div class="project-thumb">Personal Portfolio Sites</div>
+          <div class="project-body">
+            <span class="project-tag">Portfolio</span>
+            <h3>Personal Portfolio Websites</h3>
+            <dl>
+              <dt>Challenge</dt><dd>Clients wanted a personal site that felt like them, not a template.</dd>
+              <dt>Solution</dt><dd>Hand-built HTML, CSS and vanilla JavaScript sites with custom layouts and copy.</dd>
+              <dt>Outcome</dt><dd>Lightweight, fast-loading sites with a clear personal voice.</dd>
+            </dl>
+            <div class="tech-pills"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+          </div>
+        </div>
+
+        <div class="project-card show" data-cat="portfolio">
+          <div class="project-thumb">Future Concepts</div>
+          <div class="project-body">
+            <span class="project-tag">Concept</span>
+            <h3>Future Concept Websites</h3>
+            <dl>
+              <dt>Challenge</dt><dd>Exploring how small businesses could present themselves more simply online.</dd>
+              <dt>Solution</dt><dd>Self-directed concept builds testing layout, accessibility and performance ideas.</dd>
+              <dt>Outcome</dt><dd>A growing personal library of patterns to reuse on client work.</dd>
+            </dl>
+            <div class="tech-pills"><span>HTML</span><span>CSS</span><span>JS</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Technical Skills</p>
+        <h2>What I work with</h2>
+      </div>
+      <div class="skills-grid reveal">
+        <div class="skill-card">
+          <h3>Business Analysis</h3>
+          <ul><li>Requirements Gathering</li><li>User Stories</li><li>BRD / FRS / FRD</li><li>User Manuals</li></ul>
+        </div>
+        <div class="skill-card">
+          <h3>Testing</h3>
+          <ul><li>UAT</li><li>Manual & Regression Testing</li><li>Functional Testing</li><li>Bug Reporting & Tracking</li></ul>
+        </div>
+        <div class="skill-card">
+          <h3>Frontend</h3>
+          <ul><li>HTML & CSS</li><li>JavaScript (Vanilla)</li><li>Responsive Design</li><li>Cross-browser Testing</li></ul>
+        </div>
+        <div class="skill-card">
+          <h3>WordPress</h3>
+          <ul><li>Site Deployment</li><li>cPanel / Hosting</li><li>GoHighLevel Pages</li><li>Basic PHP</li></ul>
+        </div>
+        <div class="skill-card">
+          <h3>Documentation</h3>
+          <ul><li>Functional Specs</li><li>Change Requests</li><li>System Documentation</li><li>End-user Training</li></ul>
+        </div>
+        <div class="skill-card">
+          <h3>Project Management</h3>
+          <ul><li>JIRA & Trello</li><li>Lucidchart & Visio</li><li>Figma & Balsamiq</li><li>Stakeholder Communication</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEYOND WORK -->
+  <section id="beyond">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Beyond Work</p>
+        <h2>A little more about me</h2>
+      </div>
+      <div class="beyond-grid reveal">
+        <div class="beyond-item"><div class="beyond-icon">✈️</div><span>Travelling</span></div>
+        <div class="beyond-item"><div class="beyond-icon">📷</div><span>Photography</span></div>
+        <div class="beyond-item"><div class="beyond-icon">🐱</div><span>Cats</span></div>
+        <div class="beyond-item"><div class="beyond-icon">🍵</div><span>Matcha</span></div>
+        <div class="beyond-item"><div class="beyond-icon">🌱</div><span>Learning Tech</span></div>
+        <div class="beyond-item"><div class="beyond-icon">🗺️</div><span>Travel Guides</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPROACH -->
+  <section id="approach">
+    <div class="wrap approach reveal">
+      <blockquote>
+        "I believe technology should make life easier, not more complicated. Whether I'm documenting a system, building a website or helping a business improve a process, my goal is always the same — create something practical, clear and genuinely useful."
+        <cite>My Approach</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Services</p>
+        <h2>How I can help your business</h2>
+      </div>
+      <div class="services-list reveal">
+        <div class="item"><span class="name">Simple Website</span><span class="arrow">→</span></div>
+        <div class="item"><span class="name">Business Website</span><span class="arrow">→</span></div>
+        <div class="item"><span class="name">Website Maintenance</span><span class="arrow">→</span></div>
+        <div class="item"><span class="name">Google Business Profile Setup</span><span class="arrow">→</span></div>
+        <div class="item"><span class="name">Custom Website Solutions</span><span class="arrow">→</span></div>
+        <div class="item"><span class="name">Business Process Documentation</span><span class="arrow">→</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Contact</p>
+        <h2>Let's build something together.</h2>
+      </div>
+      <div class="contact-grid reveal">
+        <div>
+          <p style="color:var(--charcoal-soft); max-width:420px;">Have a project in mind, or just want to talk through an idea? I'm always happy to hear from businesses and fellow builders.</p>
+          <ul class="contact-list">
+            <li><span class="ic">✉️</span><a href="mailto:nursyakilaroslan510@gmail.com">nursyakilaroslan510@gmail.com</a></li>
+            <li><span class="ic">📞</span><a href="tel:+60148008473">+60 14-800 8473</a></li>
+            <li><span class="ic">📍</span><span>Kota Damansara, Petaling Jaya</span></li>
+            <li><span class="ic">💼</span><a href="https://www.linkedin.com/in/nursyakilaroslan-620733202" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><span class="ic">🐙</span><a href="#" id="githubLink">GitHub</a></li>
+            <li><span class="ic">📄</span><a href="#" id="resumeBtn2">Download Resume</a></li>
+          </ul>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div>
+            <label for="cname">Name</label>
+            <input id="cname" name="name" type="text" required placeholder="Your name">
+          </div>
+          <div>
+            <label for="cemail">Email</label>
+            <input id="cemail" name="email" type="email" required placeholder="you@example.com">
+          </div>
+          <div>
+            <label for="cmessage">Message</label>
+            <textarea id="cmessage" name="message" rows="4" required placeholder="Tell me a little about your project"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="align-self:flex-start;">Send Message</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© <span id="year"></span> Nursyakila Roslan. All rights reserved.</p>
+  <p>Built with HTML, CSS &amp; JavaScript. Made with curiosity, matcha and plenty of problem solving.</p>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+<script>
+(function(){
+  "use strict";
+
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Mobile menu
+  var menuBtn = document.getElementById('menuBtn');
+  var navList = document.getElementById('navList');
+  menuBtn.addEventListener('click', function(){
+    var open = navList.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open);
+  });
+  navList.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ navList.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false'); });
+  });
+
+  // Theme toggle
+  var themeToggle = document.getElementById('themeToggle');
+  var root = document.documentElement;
+  function setTheme(t){
+    if(t === 'dark'){ root.setAttribute('data-theme','dark'); themeToggle.textContent='☀️'; }
+    else { root.removeAttribute('data-theme'); themeToggle.textContent='🌙'; }
+    try{ localStorage.setItem('theme', t); }catch(e){}
+  }
+  var saved = 'light';
+  try{ saved = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); }catch(e){}
+  setTheme(saved);
+  themeToggle.addEventListener('click', function(){
+    setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+  });
+
+  // Typing animation
+  var phrases = ['practical digital solutions.', 'websites people enjoy using.', 'simple, useful systems.'];
+  var typingEl = document.getElementById('typingText');
+  var pIndex = 0, cIndex = 0, deleting = false;
+  function tick(){
+    var word = phrases[pIndex];
+    if(!deleting){
+      cIndex++;
+      typingEl.textContent = word.slice(0, cIndex);
+      if(cIndex === word.length){ deleting = true; setTimeout(tick, 1800); return; }
+    } else {
+      cIndex--;
+      typingEl.textContent = word.slice(0, cIndex);
+      if(cIndex === 0){ deleting = false; pIndex = (pIndex+1) % phrases.length; }
+    }
+    setTimeout(tick, deleting ? 40 : 70);
+  }
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){ tick(); }
+  else { typingEl.textContent = phrases[0]; }
+
+  // Scroll reveal
+  var revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ entry.target.classList.add('in'); io.unobserve(entry.target); }
+      });
+    }, {threshold: 0.15});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  // Back to top
+  var toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function(){
+    toTop.classList.toggle('show', window.scrollY > 500);
+  });
+  toTop.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+
+  // Project filtering
+  var filterBtns = document.querySelectorAll('.filter-btn');
+  var projectCards = document.querySelectorAll('.project-card');
+  filterBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      filterBtns.forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      var f = btn.getAttribute('data-filter');
+      projectCards.forEach(function(card){
+        var match = (f === 'all' || card.getAttribute('data-cat') === f);
+        card.classList.toggle('show', match);
+      });
+    });
+  });
+
+  // Contact form (no backend — friendly placeholder behaviour)
+  var form = document.getElementById('contactForm');
+  var status = document.getElementById('formStatus');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    status.textContent = "Thanks for reaching out! I'll get back to you soon.";
+    form.reset();
+  });
+
+  // Resume / GitHub placeholders
+  ['resumeBtn','resumeBtn2'].forEach(function(id){
+    var el = document.getElementById(id);
+    if(el){ el.addEventListener('click', function(e){ e.preventDefault(); alert('Add your resume PDF link here.'); }); }
+  });
+  document.getElementById('githubLink').addEventListener('click', function(e){
+    e.preventDefault(); alert('Add your GitHub profile link here.');
+  });
+
+})();
+</script>
+</body>
+</html>
